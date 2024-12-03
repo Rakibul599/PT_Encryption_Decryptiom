@@ -134,28 +134,5 @@ public class Cipher {
 
         return decryptedText.toString();
     }
-
-    public static void main(String[] args) {
-        String publicKey = "Cyber";
-        String plainText = "Naeeeem";
-
-        // Step 1: Apply Playfair Cipher
-        String playfairCipherText = playfairEncrypt(plainText);
-        System.out.println("Playfair Encrypted Text: " + playfairCipherText);
-
-        // Step 2: Apply Transposition Cipher
-        String transpositionCipherText = transposeEncrypt(playfairCipherText);
-        System.out.println("Transposition Encrypted Text: " + transpositionCipherText);
-
-        // Step 3: Apply Transposition Decryption
-        String transpositionDecryptedText = transposeDecrypt(transpositionCipherText);
-        System.out.println("Transposition Decrypted Text: " + transpositionDecryptedText);
-
-        // Step 4: Apply Playfair Decryption
-        String playfairDecryptedText = playfairDecrypt(transpositionDecryptedText, publicKey);
-        System.out.println("Playfair Decrypted Text: " + playfairDecryptedText);
-
-        // Show the original message
-        System.out.println("Original Message: " + plainText);
-    }
+    
 }
